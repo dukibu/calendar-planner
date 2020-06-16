@@ -1,0 +1,233 @@
+/* Color Palette */
+
+:root {
+  --light-gray: #dadce8;
+  --light-blue: #1b9ce2;
+}
+
+/* Basic */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Calendar */
+
+#calendar {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  min-height: 500px;
+  width: auto;
+}
+
+/* Days */
+
+.day {
+  border: 1px solid var(--light-gray);
+  text-align: center;
+  padding-top: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 200ms, color 200ms;
+  justify-content: center;
+}
+
+.day.openbtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: end;
+  padding: 5px;
+}
+
+/* Marked field */
+
+.selected {
+  background-color: var(--light-blue);
+  color: #fff;
+}
+
+/* The Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  max-width: 600px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Animation */
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: var(--light-blue);
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: var(--light-blue);
+  color: white;
+}
+
+/* The Form */
+
+#task-form,
+.card-action {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 70px;
+  max-width: 300px;
+}
+
+input#task,
+input#filter {
+  margin: 10px 0px;
+}
+
+input#filter {
+  margin-bottom: 0px;
+}
+
+input[type="text"] {
+  background-color: transparent;
+  border: 1px solid var(--light-blue);
+  padding: 8px;
+  border-radius: 1px;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1rem;
+}
+
+#task-list {
+  padding: 0px;
+}
+
+ul li {
+  width: 80%;
+  list-style: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px 5px 5px -40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.list-item {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.delete-item {
+  display: flex;
+  margin-left: auto;
+}
+
+.fa-remove {
+  cursor: pointer;
+}
+
+.btn {
+  width: 150px;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  background-color: var(--light-blue);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  border-radius: 2px;
+  width: 150px;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.clear-tasks {
+  width: 130px;
+  margin-top: -5px;
+  margin-bottom: 50px;
+}

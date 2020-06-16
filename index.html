@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Calendar</title>
+</head>
+
+<body>
+
+  <!-- Calendar -->
+  <h1>Calendar</h1>
+
+  <!-- Current Month -->
+  <p id="current-month"></p>
+
+  <div id="calendar"></div>
+
+  <!-- The Modal -->
+  <div id="modal" class="modal">
+
+    <!-- Modal Content -->
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Task Planner</h2>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="container">
+
+          <div id="main" class="card">
+
+            <div class="card-content">
+
+              <h3 class="card-title">Task List</h3>
+
+              <form id="task-form">
+
+                <div class="input-field">
+                  <label for="task">New Task</label>
+                  <input type="text" name="task" id="task">
+                </div>
+
+                <input type="submit" value="Add Task" class="btn">
+
+              </form>
+
+            </div> <!-- End of class="card-content" -->
+
+            <div class="card-action">
+
+              <h3 id="task-title">Tasks</h3>
+
+              <div class="input-field">
+                <label for="filter">Filter Tasks</label>
+                <input type="text" name="filter" id="filter">
+              </div>
+
+              <ul class="task-list"></ul>
+
+              <a href="#" class="clear-tasks btn black">Clear Tasks</a>
+
+            </div> <!-- End of class="card-action" -->
+
+          </div> <!-- End of id="main" -->
+
+        </div> <!-- End of class="container" -->
+
+      </div> <!-- End of  class="modal-body" -->
+
+      <div class="modal-footer">
+        <p>Frivizn &copy; 2020</p>
+      </div>
+
+    </div> <!-- End of class="modal-content" -->
+
+  </div> <!-- End of id="modal" -->
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
